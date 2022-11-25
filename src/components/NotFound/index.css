@@ -1,0 +1,17 @@
+.notfound-outer {
+  display: flex;
+  border: 2px solid blue;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.notfound-inner {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+}

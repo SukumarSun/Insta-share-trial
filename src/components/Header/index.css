@@ -1,0 +1,44 @@
+.header-outside {
+  width: 100%;
+  display: flex;
+  background-color: rgb(161, 80, 25);
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+}
+
+.link-box {
+  display: flex;
+}
+
+h3 {
+  color: white;
+}
+
+.each-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.login-img {
+  width: 70px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logout {
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(39, 39, 168);
+}

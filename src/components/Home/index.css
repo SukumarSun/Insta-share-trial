@@ -1,0 +1,23 @@
+.story-list {
+  display: flex;
+  width: 400px;
+  overflow: auto;
+}
+
+.home-outside {
+  border: 2px solid blue;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-inside {
+  width: 100%;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+}
