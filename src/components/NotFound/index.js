@@ -1,9 +1,11 @@
 // import Header from '../Header'
 import {Link} from 'react-router-dom'
+import Header from '../Header'
 import './index.css'
 
 const NotFound = () => (
   <div className="notfound-outer">
+    <Header />
     <div className="notfound-inner">
       <img
         src="https://res.cloudinary.com/dsvdiwazh/image/upload/v1669288971/Layer_2_tcv1wr.png"

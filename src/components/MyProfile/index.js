@@ -34,7 +34,7 @@ class MyProfile extends Component {
     }
     const response = await fetch(url, option)
     const data = await response.json()
-    console.log(response, data)
+    // console.log(response, data)
     if (response.ok === true) {
       this.setState({
         myData: data.profile,
@@ -84,7 +84,7 @@ class MyProfile extends Component {
         <ul className="story-list">
           {stories.map(each => (
             <li key={each.id} className="story-listitem">
-              <img className="story-img" alt="user story" src={each.image} />
+              <img className="story-img" alt="my story" src={each.image} />
             </li>
           ))}
         </ul>

@@ -37,7 +37,7 @@ class UserProfile extends Component {
     }
     const response = await fetch(url, option)
     const data = await response.json()
-    console.log(response, data)
+    // console.log(response, data)
     if (response.ok === true) {
       this.setState({
         userData: data.user_details,

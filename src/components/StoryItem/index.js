@@ -8,7 +8,7 @@ const StoryItem = props => {
   return (
     <div>
       <div className="story-each">
-        <img alt="story img" className="story-img" src={story_url} />
+        <img alt="user story" className="story-img" src={story_url} />
         <p className="story-name">{user_name}</p>
       </div>
     </div>
