@@ -6,6 +6,7 @@ import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import StoryItem from '../StoryItem'
 import PostItem from '../PostItem'
+import ReactSlick from '../ReactSlick'
 
 import './index.css'
 
@@ -21,7 +22,7 @@ class Home extends Component {
     storyData: [],
     shareData: [],
     searchData: [],
-    searchId: 'day',
+    searchId: '',
     // like_status: false,
     status: presentState.initial,
     postStatus: presentState.initial,
@@ -69,9 +70,10 @@ class Home extends Component {
     return (
       <div className="story-div">
         <ul className="story-list">
-          {storyData.map(each => (
+          <ReactSlick storyData={storyData} />
+          {/* {storyData.map(each => (
             <StoryItem key={each.user_id} storyDetails={each} />
-          ))}
+          ))} */}
         </ul>
       </div>
     )
@@ -117,7 +119,7 @@ class Home extends Component {
     }
     const shareResponse = await fetch(shareUrl, options)
     const shareData = await shareResponse.json()
-    console.log(shareData.posts)
+    // console.log(shareData.posts)
     if (shareResponse.ok === true) {
       this.setState({
         shareData: shareData.posts,
@@ -161,7 +163,7 @@ class Home extends Component {
   postLoading = () => (
     // eslint-disable-next-line react/no-unknown-property
     <div testid="loader">
-      <Loader type="ThreeDots" width={60} height={60} color="blue" />
+      <Loader type="ThreeDots" width={100} height={100} color="orange" />
     </div>
   )
 
@@ -235,21 +237,25 @@ class Home extends Component {
     this.incrementOrdecrement(like_status, post_id)
   }
 
-  retryGetAgain = () => {
+  //   retryGetAgain = () => {
+  //     const {searchId} = this.state
+  //     console.log(searchId)
+  //     this.doSearchApi(searchId)
+  //   }
+  retry = () => {
     const {searchId} = this.state
-    console.log(searchId)
     this.doSearchApi(searchId)
   }
 
-  doSearchApi = async id => {
-    console.log(id)
+  doSearchApi = async searchInput => {
+    console.log(searchInput)
     this.setState({
       searchStatus: presentState.loading,
-      //   searchId: id,
       searchClicked: true,
+      searchId: searchInput,
     })
     const jwtToken = Cookies.get('jwt_token')
-    const urls = `https://apis.ccbp.in/insta-share/posts?search=${id}`
+    const urls = `https://apis.ccbp.in/insta-share/posts?search=${searchInput}`
     const options = {
       method: 'GET',
       headers: {
@@ -272,6 +278,7 @@ class Home extends Component {
 
   searchSuccess = () => {
     const {searchData} = this.state
+    console.log(searchData)
     const render = searchData.length > 0
     return render ? (
       <>
@@ -302,7 +309,7 @@ class Home extends Component {
   searchLoading = () => (
     // eslint-disable-next-line react/no-unknown-property
     <div testid="loader">
-      <Loader type="ThreeDots" width={60} height={60} color="blue" />
+      <Loader type="ThreeDots" width={60} height={60} color="green" />
     </div>
   )
 
@@ -313,7 +320,7 @@ class Home extends Component {
         src="https://res.cloudinary.com/dsvdiwazh/image/upload/v1669578704/Icon_ptkmvd.png"
       />
       <p>Something went wrong. Please try again</p>
-      <button type="button" onClick={this.doSearchApi}>
+      <button type="button" onClick={this.retry}>
         Try again
       </button>
     </div>

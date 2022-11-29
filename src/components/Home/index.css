@@ -1,7 +1,7 @@
 .story-list {
   display: flex;
-  width: 400px;
-  overflow: auto;
+  /* width: 400px;
+  overflow: auto; */
 }
 
 .home-outside {
