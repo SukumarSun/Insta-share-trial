@@ -1,62 +1,11 @@
-In this project let's build a **Insta Share App** by applying the concepts we have learned till now. This project allows you to practice the concepts and techniques learned till React Course and apply them in a concrete project.
+In this project I have built an **Insta Share App** , an app that will fetch data from an internal server using a class component, displaying that data, using **component lifecycle methods**, **routing** concepts, **authentication**, and **authorization**, and adding responsiveness to the website.
 
-You will demonstrate your skills by creating an app that will fetch data from an internal server using a class component, displaying that data, using **component lifecycle methods**, **routing** concepts, **authentication**, and **authorization**, and adding responsiveness to the website.
-
-This is an individual assessment. All work must be your own.
-
-### Prerequisites
-
-#### UI Prerequisites
+### Complete Details
 
 <details>
-<summary>Click to view</summary>
-
-- What is Figma?
-  - Figma is a vector graphics editor and prototyping tool which is primarily web-based. You can check more info on the <a href="https://www.figma.com/" target="_blank">Website</a>
-- Create a Free account in Figma
-  - Kindly follow the instructions as shown in <a href="https://www.youtube.com/watch?v=hrHL2VLMl7g" target="_blank">this</a> video to create a Free Figma account. Watch the video upto **00:55**
-- How to Check CSS in Figma?
-  - Kindly follow the instructions as shown in <a href="https://youtu.be/B242nuM3y2s?t=80" target="_blank">this</a> video to check CSS in the Figma screen. Watch the video upto **02:45**
-- Export Images in Figma screen
-
-  - Kindly follow the instructions as shown in <a href="https://www.youtube.com/watch?v=NpzL1MONwaw" target="_blank">this</a> video to export images from the Figma screen
-  - Click on the Export button to get Export options as shown in the below image
-
-  <div style="text-align:center;margin:10px 0px 0px 45px;width:200px;">
-    <img src="https://assets.ccbp.in/frontend/react-js/figma-export-option.png" />
-  </div>
-
-- Upload your exported images from Figma to Cloudinary and get image URLs from Cloudinary. Refer <a href="https://learning.ccbp.in/projects/course?c_id=fe4c935d-3ad5-4bb8-a1a5-9b045ae70010&s_id=2f72d6fe-09a7-4c0a-b0db-196740c853a0&t_id=6535e48d-fb4e-45c4-9654-3da423c79e26" target="_blank">this</a> session for better understanding
-
-</details>
-
-#### Design Files
-
-<details>
-<summary>Click to view</summary>
-
-- You can check the **Design Files** for different devices <a href="https://www.figma.com/file/FwBVnpWfl5DYJ77kbljTdT/Insta_Share?node-id=0%3A1" target="_blank">here</a>
-
-</details>
-
-### Set Up Instructions
-
-<details>
-
-<summary>Click to view</summary>
-
-- Download dependencies by running `npm install`
-
-- Start up the app using `npm start`
-
-</details>
-
-### Completion Instructions
-
-<details>
-<summary>Functionality to be added</summary>
+<summary>Functionality that is added</summary>
 <br />
-The app must have the following functionalities
+The app is having the following functionalities
 
 - **Login Route**
 
@@ -163,7 +112,7 @@ The app must have the following functionalities
 
 </details>
 
-### Quick Tips
+### Third party packages used
 
 <details>
 
@@ -185,26 +134,6 @@ The app must have the following functionalities
 
 </details>
 
-### Important Note
-
-- In this project, the data you have sent through `POST-APIs` are not saved in the `Database`. If you refresh the page, the changes will not be persisted
-- Whenever you do a `POST-API` call, we are sending a mock object as a response
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- **Note:**
-
-  - Don't use any third-party packages other than packages mentioned in the **Quick Tips**
-  - Use media queries for responsiveness. Instead of rendering the same elements twice for responsiveness.
-  - For Mini Projects, you have to use normal HTML elements to style the React Components. Usage of `styled-components` (CSS in JS) to style React components are not supported in Mini Projects. Test cases won't be passed, if you use styled components
-  - Refer to the below Example for the usage of `testid` in the HTML elements.
-
-    - Example: `<div testid="postItem" className="post-item"/>`.
 
 - **Routes**
 
@@ -214,84 +143,11 @@ The app must have the following functionalities
   - Render `UserProfile` Route component when the path in URL matches `/users/:id`
     - **Note:-** use the specific user id in place of id
 
-- Wrap the `Loader` component with an HTML container element and add the `testid` attribute value as **loader** to it
-
-  ```jsx
-  <div className="loader-container" testid="loader">
-    <Loader type="TailSpin" color="#4094EF" height={50} width={50} />
-  </div>
-  ```
-
-- Wrap the Clickable `react-icons` components with an HTML button element and add the `testid` attribute values accordingly
-
-  ```jsx
-  <button type="button" testid="searchIcon">
-    <FaSearch />
-  </button>
-  ```
-
-- The Failure View image should consist of alt attribute value as `failure view`
-
-- **Login Route**
-
-  - The Landing image should consist of alt attribute value as `website login`
-  - The Insta Share image should consist of alt attribute value as `website logo`
-  - The Cookies should be set by using the key name `jwt_token`
-
-- **Home Route**
-
-  - User Stories List
-    - User Stories List images should consist of alt attribute value as `user story`
-  - Posts List
-    - The Post User Profile image should consist of alt attribute value as `post author profile`
-    - The Post image should consist of alt attribute value as `post`
-    - The HTML button element with Like icon (`BsHeart` from `react-icons`) should contain the `testid` attribute value as `likeIcon`
-    - The HTML button element with Dis Like icon (`FcLike` from `react-icons`) should contain the `testid` attribute value as `unLikeIcon`
-
-- **User Profile Route**
-
-  - The Profile image should consist of alt attribute value as `user profile`
-  - Story images should consist of alt attribute value as `user story`
-  - Post images should consist of alt attribute value as `user post`
-
-- **My Profile Route**
-
-  - The Profile image should consist of alt attribute value as `my profile`
-  - Story images should consist of alt attribute value as `my story`
-  - Post images should consist of alt attribute value as `my post`
-
-- **Search Functionality**
-
-  - When Search Results are not empty
-    - The Author Profile image in the post should consist of alt attribute value as `post author profile`
-    - The Post image should consist of alt attribute value as `post`
-    - The HTML button element with Like icon (`BsHeart` from `react-icons`) should contain the `testid` attribute value as `likeIcon`
-    - The HTML button element with Dis Like icon (`FcLike` from `react-icons`) should contain the `testid` attribute value as `unLikeIcon`
-  - When Search Results are Empty
-    - Search Results Not Found image should consist of alt attribute value as `search not found`
-
-- **Not Found Route**
-
-  - The page not found image should consist of alt attribute value as `page not found`
-
-- **Header**
-
-  - The Insta Share image should consist of alt attribute value as `website logo`
-  - The HTML button element with Search icon (`FaSearch` from `react-icons`) should contain the `testid` attribute value as `searchIcon`
-
-</details>
 
 ### Resources
 
 <details>
 <summary>Data fetch URLs</summary>
-
-- **Note**: Use the values in the APIs as shown below
-
-- Use the search input value in place of `searchInput` in the query parameters
-- The value of the key `user_id` should be given in the place of `userId`
-
-- **Note:** Use the below sample code snippet to make a POST request on Login using valid username and password.
 
   ```js
   const options = {
@@ -626,14 +482,3 @@ Returns a response containing the list of search posts.
 <br/>
 </details>
 
-### Project Submission Instructions
-
-- For Mini Projects, you can submit the test cases at your own pace. But we suggest you to submit the code to know the percentage of completion through test cases and that score will be considered for your interviews
-
-- Also it's important to publish your code frequently using `Step - 4` in the Instructions tab
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
