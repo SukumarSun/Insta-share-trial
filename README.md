@@ -135,14 +135,6 @@ The app is having the following functionalities
 </details>
 
 
-- **Routes**
-
-  - Render `Login` Route component when the path in URL matches `/login`
-  - Render `Home` Route component when the path in URL matches `/`
-  - Render `MyProfile` Route component when the path in URL matches `/my-profile`
-  - Render `UserProfile` Route component when the path in URL matches `/users/:id`
-    - **Note:-** use the specific user id in place of id
-
 
 ### Resources
 
